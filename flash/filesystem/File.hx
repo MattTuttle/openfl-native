@@ -26,6 +26,11 @@ class File {
 	public var nativePath (default, set):String;
 	public var url (default, set):String;
 	
+#if windows
+	public static var separator:String = "\\";
+#else
+	public static var separator:String = "/";
+#end
 	
 	public function new (path:String = null) {
 		
